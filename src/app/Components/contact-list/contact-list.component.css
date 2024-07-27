@@ -1,0 +1,72 @@
+table{
+    width: 80%;
+
+}
+th{
+    text-align: center;
+    font-size: 16px;
+}
+
+tr,td{
+    text-align: center;
+    font-size: 14px;
+}
+
+.header{
+    width: 100%;
+    background-color: #E1EAFF;
+    color: #272B85;
+    font-weight: 600;
+    font-family: "Be Vietnam Pro", sans-serif;
+    
+}
+
+.contactTable{
+    width: 90%;
+    font-family: "Inter", sans-serif;
+    border-collapse: collapse;
+    border: 2px solid #e01212;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+.contactTable th, .contactTable td {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mapContainer{
+    overflow: scroll;
+}
+
+.actionButton:hover {
+    background-color: #2C3090;
+    color:white;
+    cursor: pointer; 
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #2C3090;
+}
+.actionButton>a:hover{
+    color: white;
+}
+
+.actionButton{
+    border: 1px solid #2C3090;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}

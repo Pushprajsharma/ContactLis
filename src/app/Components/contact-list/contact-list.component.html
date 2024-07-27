@@ -1,0 +1,42 @@
+<!-- contact-list.component.html -->
+<div class="mainContainer">
+  <div class="listContainer">
+    <div *ngIf="contacts.length === 0">
+      No contacts found.
+
+      <button class="actionButton"><a routerLink="/add-contact">Add Contact</a></button>
+    </div>
+    <table *ngIf="contacts.length > 0" class="contactTable">
+      <thead class="header">
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Longitude</th>
+          <th>Latitude</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts">
+          <td>{{ contact.name }}</td>
+          <td>{{ contact.phone }}</td>
+          <td>{{ contact.email }}</td>
+          <td>{{ contact.addresses[0].address }}</td> <!-- Display the first address -->
+          <td>{{ contact.longitude }}</td>
+          <td>{{ contact.latitude }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Locations on Map</h1>
+    <div class="mapContainer">
+      <app-map></app-map>
+    </div>
+  
+  
+  </div>
+  
+
+</div>
+
+  

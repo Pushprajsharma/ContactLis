@@ -1,0 +1,66 @@
+<!-- add-contact.component.html -->
+<form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+
+  <div class="myForm">
+    <div class="formControl">
+      <label class="inputLabel">Name:</label>
+      <input class="inputBox"  formControlName="name" />
+      <div class="validationError" *ngIf="contactForm.get('name').invalid && contactForm.get('name').touched">
+        Name is required.
+      </div>
+    </div>
+    <div class="formControl">
+      <label class="inputLabel">Phone Number:</label>
+      <input class="inputBox"  formControlName="phone" />
+      <div class="validationError"  *ngIf="contactForm.get('phone').invalid && contactForm.get('phone').touched">
+        Invalid phone number.
+      </div>
+    </div>
+
+    <div class="formControl">
+      <label class="inputLabel">Email:</label>
+      <input class="inputBox" formControlName="email" />
+      <div class="validationError"  *ngIf="contactForm.get('email').invalid && contactForm.get('email').touched">
+        Invalid email.
+      </div>
+    </div>
+  </div>
+
+  <div class="myForm">
+    <div class="formControl">
+      <label class="inputLabel">Longitude:</label>
+      <input class="inputBox" formControlName="longitude" />
+    </div>
+  
+    <div class="formControl">
+      <label class="inputLabel">Latitude:</label>
+      <input class="inputBox" formControlName="latitude" />
+    </div>
+
+  </div>
+
+  
+  <div class="formControl" formArrayName="addresses">
+    <div *ngFor="let address of addresses.controls; let i = index" [formGroupName]="i">
+      <div>
+        <label class="inputLabel">Address:</label>
+        <input class="inputBox" formControlName="address" />
+        <div class="validationError"  *ngIf="address.get('address').invalid && address.get('address').touched">
+          Address is required.
+        </div>
+      </div>
+      <button class="actionButton" type="button" (click)="removeAddress(i)">Remove</button>
+      <button class="actionButton" type="button" (click)="addAddress()">Add Address</button>
+    </div>
+  
+  </div>
+ 
+  <div *ngIf="addresses.controls.length >= 5">Maximum 5 addresses allowed.</div>
+    
+
+
+    
+    
+    <button class="primary-button actionButton" type="submit">Submit</button>
+  </form>
+  

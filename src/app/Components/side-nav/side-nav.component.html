@@ -1,0 +1,9 @@
+<div class="navbar">
+    <div class="menus">
+        <span 
+        [ngClass]="{ active: isActive('/admin-dashboard') }" class="menuItem"><a routerLink="">Dashboard</a></span>
+        <span
+        [ngClass]="{ active: isActive('/admin-dashboard/invoices') }" class="menuItem"><a routerLink="/add-contact">Add Contact</a></span>
+       
+    </div>
+</div>

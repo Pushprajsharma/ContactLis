@@ -1,0 +1,81 @@
+.myForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+.formControl::-webkit-scrollbar
+{
+    width: 200px;
+    display: none;
+}
+
+.formControl{
+    /* background-color: rgb(220, 204, 173); */
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 0px 20px 0px 10px;
+    /* background-color: red; */
+}
+
+.inputLabel{
+    color: #6E6893;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: medium;
+}
+
+.inputBox{
+    width: 100%;
+    padding: 10px 10px;
+    margin-top: 10px;
+    border: 1px solid #D0D0E5;
+    border-radius: 8px;
+}
+
+
+.actionButton{
+    border: 1px solid #2C3090;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.primary-button {
+    background-color: #2C3090;
+    color:white;
+    cursor: pointer; 
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #2C3090;
+    padding: 10px 30px;
+}
+.primary-button:hover {
+    background-color: white;
+    color: #2C3090;
+    cursor: pointer; 
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #2C3090;
+    padding: 10px 30px;
+}
+
+.actionButton:hover {
+    background-color: #2C3090;
+    color:white;
+    cursor: pointer; 
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #2C3090;
+}
+.validationError{
+    color: red;
+    font-size: 14px;
+}
